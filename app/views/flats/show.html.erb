@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <%= link_to 'Simple AirBnB', flats_path %>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<p>
+  <strong>Name:</strong>
+  <%= @flat.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @flat.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @flat.description %>
+</p>
+
+<p>
+  <strong>Price per night:</strong>
+  <%= @flat.price_per_night %>
+</p>
+
+<p>
+  <strong>Number of guests:</strong>
+  <%= @flat.number_of_guests %>
+</p>
+
+<%= link_to 'Edit', edit_flat_path(@flat) %> |
+<%= link_to 'Back', flats_path %>
